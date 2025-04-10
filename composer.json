@@ -1,0 +1,19 @@
+{
+  "name": "ahmed/phpiggy",
+  "description": "app for tracking expenses",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahmed Deghady",
+      "email": "52136140+ahmed-fawzy99@users.noreply.github.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "src/Framework",
+      "App\\": "src/App"
+    }
+  }
+}
