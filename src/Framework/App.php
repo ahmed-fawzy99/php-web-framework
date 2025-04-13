@@ -26,18 +26,43 @@ class App
         $this->router->dispatch($path, $method, $this->container);
     }
 
-    public function get(string $path, array $controller): void
+    public function get(string $path, array $controller): App
     {
         $this->router->add('GET', $path, $controller);
+        return $this;
     }
 
-    public function post(string $path, array $controller): void
+
+    public function post(string $path, array $controller): App
     {
         $this->router->add('POST', $path, $controller);
+        return $this;
+    }
+
+    public function put(string $path, array $controller): App
+    {
+        $this->router->add('PUT', $path, $controller);
+        return $this;
+    }
+
+    public function delete(string $path, array $controller): App
+    {
+        $this->router->add('DELETE', $path, $controller);
+        return $this;
     }
 
     public function addMiddleware(string $className): void
     {
         $this->router->addMiddleware($className);
+    }
+
+    public function addRouteMiddleware(string $className): void
+    {
+        $this->router->addRouteMiddleware($className);
+    }
+
+    public function setErrorHandler(array $controller): void
+    {
+        $this->router->setErrorHandler($controller);
     }
 }

@@ -10,6 +10,8 @@ use App\Config\Path;
 use App\Config\Routes;
 use Framework\App;
 
+$dotenv = Dotenv\Dotenv::createImmutable(Path::ROOT);
+$dotenv->load();
 
 $app = new App(Path::CONTAINER_DEFINITIONS);
 

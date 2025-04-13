@@ -474,3 +474,6 @@ composer.lock
 
 
 .env
+
+storage/uploads/receipts/*
+!storage/uploads/receipts/.gitkeep

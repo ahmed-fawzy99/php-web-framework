@@ -776,6 +776,10 @@ select {
     justify-content: space-between;
 }
 
+.gap-2 {
+    gap: 0.5rem;
+}
+
 .gap-6 {
     gap: 1.5rem;
 }
@@ -1361,4 +1365,9 @@ hr {
         -moz-column-gap: 2.5rem;
         column-gap: 2.5rem;
     }
+}
+
+.field-error {
+    color: #f44336;
+    font-size: 12px;
 }

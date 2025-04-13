@@ -16,8 +16,7 @@ class TemplateDataMiddleware implements MiddlewareInterface
 
     public function handle(callable $next): void
     {
-        $this->view->addGlobalData('title', 'PHPiggy Framework');
-
+        $this->view->addGlobalData('title', 'PHP Framework');
         $next();
     }
 }

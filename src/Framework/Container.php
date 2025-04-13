@@ -62,7 +62,7 @@ class Container
         return $reflectionClass->newInstanceArgs($dependencies);
     }
 
-    private function get(string $className)
+    public function get(string $className)
     {
         if (!array_key_exists($className, $this->definitions)) {
             throw new \RuntimeException("Dependency Injection Exception: Class $className not found in definitions");
